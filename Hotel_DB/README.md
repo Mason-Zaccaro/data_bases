@@ -4,7 +4,7 @@
 
 ## Этап 1: Проектирование базы данных
 
-1. **[Шаг1_Идентификация_Сущностей_и_Атрибутов.md](./Step_1_Database_Design/Step1_Entity_and_Attribute_Identification.md)**  
+1. **[Шаг1_Идентификация_Сущностей_и_Атрибутов.md](./Step_1_Database_Design/Step1_Entity_and_Attribute_Identification.docx)**  
    - Начальный анализ: определение объектов, сущностей, атрибутов и ключевых данных на основе описания предметной области гостиницы.
 
 2. **[Шаг2_Первая_Нормальная_Форма.md](./Step_1_Database_Design/Step2_First_Normal_Form.md)**  
