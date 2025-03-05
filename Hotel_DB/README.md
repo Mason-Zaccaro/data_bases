@@ -4,47 +4,47 @@
 
 ## Этап 1: Проектирование базы данных
 
-1. **[Шаг1_Идентификация_Сущностей_и_Атрибутов.md](./Step_1_Database_Design/Step1_Entity_and_Attribute_Identification.docx)**  
+1. **[Шаг1_Идентификация_Сущностей_и_Атрибутов](./Step_1_Database_Design/Step1_Entity_and_Attribute_Identification.docx)**  
    - Начальный анализ: определение объектов, сущностей, атрибутов и ключевых данных на основе описания предметной области гостиницы.
 
-2. **[Шаг2_Первая_Нормальная_Форма.md](./Step_1_Database_Design/Step2_First_Normal_Form.md)**  
+2. **[Шаг2_Первая_Нормальная_Форма](./Step_1_Database_Design/Step2_First_Normal_Form.docx)**  
    - Нормализация до 1NF: преобразование сущностей и атрибутов в атомарные, неповторяющиеся структуры.
 
-3. **[Шаг3_Вторая_и_Третья_Нормальные_Формы.md](./Step_1_Database_Design/Step3_Second_and_Third_Normal_Forms.md)**  
+3. **[Шаг3_Вторая_и_Третья_Нормальные_Формы](./Step_1_Database_Design/Step3_Second_and_Third_Normal_Forms.docx)**  
    - Нормализация до 2NF и 3NF: определение первичных и суррогатных ключей, связей и распределение атрибутов.
 
-4. **[Шаг4_Проектирование_ERD_Модели.md](./Step_1_Database_Design/Step4_ERD_Model_Design.md)**  
+4. **[Шаг4_Проектирование_ERD_Модели](./Step_1_Database_Design/Step4_ERD_Model_Design.docx)**  
    - Проектирование ERD-модели: инструкции по созданию структуры базы данных (родительские таблицы, связи 1:М, М:М) с использованием SQLDBM.
 
-5. **[Шаг5_Словарь_Данных.md](./Step_1_Database_Design/Step5_Data_Dictionary.md)**  
+5. **[Шаг5_Словарь_Данных](./Step_1_Database_Design/Step5_Data_Dictionary.docx)**  
    - Создание словаря данных: определение физических названий атрибутов, типов данных, обязательности и ограничений на основе логической модели.
 
-6. **[Шаг6_Даталогическая_Модель.md](./Step_1_Database_Design/Step6_Datalogical_Model.md)**  
+6. **[Шаг6_Даталогическая_Модель](./Step_1_Database_Design/Step6_Datalogical_Model.docx)**  
    - Проектирование физической модели: обновление ERD-модели с физическими названиями, типами данных и ограничениями для реализации в СУБД.
 
 ## Этап 2: Реализация базы данных
 
-7. **[Шаг7_Создание_Базы_и_Ролей.md](./Step_2_Realization_database/Step7_Database_and_Roles_Creation.md)**  
+7. **[Шаг7_Создание_Базы_и_Ролей](./Step_2_Realization_database/Step7_Database_and_Roles_Creation.docx)**  
    - Создание базы данных в PostgreSQL и MySQL, настройка подключений, определение ролей (Клиент, Сотрудник, Администратор) и тестирование доступа.
 
-8. **[Шаг8_Реализация_Таблиц_и_Прав.md](./Step_2_Realization_database/Step8_Tables_and_Permissions_Implementation.md)**  
+8. **[Шаг8_Реализация_Таблиц_и_Прав](./Step_2_Realization_database/Step8_Tables_and_Permissions_Implementation.docx)**  
    - Реализация таблиц базы данных, создание индексов, процедур для структуры, распределение прав доступа к таблицам для ролей.
 
-9. **[Шаг9_Хранимые_Процедуры_и_Права.md](./Step_2_Realization_database/Step9_Stored_Procedures_and_Permissions.md)**  
+9. **[Шаг9_Хранимые_Процедуры_и_Права](./Step_2_Realization_database/Step9_Stored_Procedures_and_Permissions.docx)**  
    - Создание хранимых процедур для операций с данными (добавление, изменение, удаление) и настройка прав доступа к ним для ролей.
 
-10. **[Шаг10_Заполнение_Данными.md](./Step_2_Realization_database/Step10_Data_Population.md)**  
+10. **[Шаг10_Заполнение_Данными](./Step_2_Realization_database/Step10_Data_Population.docx)**  
     - Заполнение таблиц тестовыми данными с использованием прямых SQL-запросов и хранимых процедур, проверка структуры на практике.
 
 ## Этап 3: Сопровождение и актуализация базы данных
 
-11. **[Шаг11_Сопровождение_Моделей_и_3НФ.md](./Step_3_Escort_and_updating_database/Step11_Models_and_3NF_Maintenance.md)**  
+11. **[Шаг11_Сопровождение_Моделей_и_3НФ](./Step_3_Escort_and_updating_database/Step11_Models_and_3NF_Maintenance.docx)**  
     - Сопровождение инфологической и даталогической моделей, словаря данных и структуры 3NF с учетом новых требований (добавление подсистемы заказов услуг).
 
-12. **[Шаг12_Сопровождение_Таблиц_PostgreSQL.md](./Step_3_Escort_and_updating_database/Step12_PostgreSQL_Tables_Maintenance.md)**  
+12. **[Шаг12_Сопровождение_Таблиц_PostgreSQL](./Step_3_Escort_and_updating_database/Step12_PostgreSQL_Tables_Maintenance.docx)**  
     - Сопровождение таблиц в PostgreSQL: обновление структуры, добавление новых объектов (Status_Receipt, Receipt и др.), настройка ограничений и прав доступа.
 
-13. **[Шаг13_Актуализация_и_Фильтры.md](./Step_3_Escort_and_updating_database/Step13_Data_Updating_and_Filters.md)**  
+13. **[Шаг13_Актуализация_и_Фильтры](./Step_3_Escort_and_updating_database/Step13_Data_Updating_and_Filters.docx)**  
     - Актуализация данных через хранимые процедуры, отработка фильтров (равно, меньше, больше и т.д.) и встроенных функций PostgreSQL (COUNT, AVG и др.), создание резервной копии.
 
 ## Цель проекта
