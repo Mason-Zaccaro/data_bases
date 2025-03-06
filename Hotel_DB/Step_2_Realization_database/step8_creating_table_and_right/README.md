@@ -1,4 +1,7 @@
-## Create.sql 
+## [Отчет.DOCX](./1-PostgreSQL.DOCX)
+- Подробный отчет по каждому этапу создания скриптов
+  
+## [Create.sql](./Create.sql)
 - Скрипт процедуры на создание таблиц и индексов;
 
 <details>
@@ -238,7 +241,7 @@ GRANT SELECT, DELETE ON Contract TO rl_Administrator;
 ```
 </details>
 
-## Re-Create.sql 
+## [Re-Create.sql](./Re-Create.sql)
 - Скрипт процедуры на перезапись структуры БД
 
 <details>
