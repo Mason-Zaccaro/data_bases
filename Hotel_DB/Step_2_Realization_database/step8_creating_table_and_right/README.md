@@ -3,6 +3,7 @@
 
 <details>
 <summary>Нажмите, чтобы развернуть код</summary>
+	
 ```sql
 -- Таблица Класс (Class)
 CREATE TABLE Class (
@@ -234,13 +235,15 @@ GRANT SELECT, DELETE ON Client TO rl_Administrator;
 GRANT SELECT, DELETE ON Client_Reservation TO rl_Administrator;
 GRANT SELECT, DELETE ON Add_Services_Reservation TO rl_Administrator;
 GRANT SELECT, DELETE ON Contract TO rl_Administrator;
-</details> ```
+```
+</details>
 
 ## Re-Create.sql 
 - Скрипт процедуры на перезапись структуры БД
 
 <details>
 <summary>Нажмите, чтобы развернуть код</summary>
+	
 ```sql
 create or replace procedure Structure_Re_Create ()
 language plpgsql
@@ -333,4 +336,5 @@ DROP TABLE IF EXISTS Employee;
 CALL Structure_Create();
 	end;
 $$;
-</details> ```
+</details>
+```
