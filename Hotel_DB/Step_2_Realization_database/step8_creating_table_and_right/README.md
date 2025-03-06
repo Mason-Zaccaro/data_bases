@@ -1,3 +1,9 @@
+## Create.sql 
+- Скрипт процедуры на создание таблиц и индексов;
+
+<details>
+<summary>Нажмите, чтобы развернуть код</summary>
+```sql
 -- Таблица Класс (Class)
 CREATE TABLE Class (
 	ID_Class SERIAL NOT NULL CONSTRAINT PK_Class PRIMARY KEY,
@@ -228,3 +234,103 @@ GRANT SELECT, DELETE ON Client TO rl_Administrator;
 GRANT SELECT, DELETE ON Client_Reservation TO rl_Administrator;
 GRANT SELECT, DELETE ON Add_Services_Reservation TO rl_Administrator;
 GRANT SELECT, DELETE ON Contract TO rl_Administrator;
+</details> ```
+
+## Re-Create.sql 
+- Скрипт процедуры на перезапись структуры БД
+
+<details>
+<summary>Нажмите, чтобы развернуть код</summary>
+```sql
+create or replace procedure Structure_Re_Create ()
+language plpgsql
+as $$
+	begin
+-- Отзыв прав для роли rl_Client
+REVOKE SELECT ON Class FROM rl_Client;
+REVOKE SELECT ON Status_Room FROM rl_Client;
+REVOKE SELECT ON Room FROM rl_Client;
+REVOKE SELECT ON Configuration FROM rl_Client;
+REVOKE SELECT ON Options FROM rl_Client;
+REVOKE SELECT ON Room_Options FROM rl_Client;
+REVOKE SELECT ON Reservation FROM rl_Client;
+REVOKE SELECT ON Client_Reservation FROM rl_Client;
+REVOKE SELECT ON Add_Services FROM rl_Client;
+REVOKE SELECT ON Contract FROM rl_Client;
+
+-- Отзыв прав для роли rl_Employee
+REVOKE SELECT, INSERT, UPDATE ON Room_Configuration FROM rl_Employee;
+REVOKE SELECT, INSERT, UPDATE ON Room_Options FROM rl_Employee;
+REVOKE SELECT, INSERT, UPDATE ON Reservation FROM rl_Employee;
+REVOKE SELECT, INSERT, UPDATE ON Client FROM rl_Employee;
+REVOKE SELECT, INSERT, UPDATE ON Client_Reservation FROM rl_Employee;
+REVOKE SELECT, INSERT, UPDATE ON Add_Services_Reservation FROM rl_Employee;
+REVOKE SELECT, INSERT, UPDATE ON Contract FROM rl_Employee;
+REVOKE SELECT ON Class FROM rl_Employee;
+REVOKE SELECT ON Status_room FROM rl_Employee;
+REVOKE SELECT ON Room FROM rl_Employee;
+REVOKE SELECT ON Configuration FROM rl_Employee;
+REVOKE SELECT ON Options FROM rl_Employee;
+REVOKE SELECT ON Add_Services FROM rl_Employee;
+REVOKE SELECT ON Employee FROM rl_Employee;
+
+-- Отзыв прав для роли rl_Administrator
+REVOKE SELECT, INSERT, UPDATE, DELETE ON Class FROM rl_Administrator;
+REVOKE SELECT, INSERT, UPDATE, DELETE ON Status_room FROM rl_Administrator;
+REVOKE SELECT, INSERT, UPDATE, DELETE ON Room FROM rl_Administrator;
+REVOKE SELECT, INSERT, UPDATE, DELETE ON Configuration FROM rl_Administrator;
+REVOKE SELECT, INSERT, UPDATE, DELETE ON Options FROM rl_Administrator;
+REVOKE SELECT, INSERT, UPDATE, DELETE ON Add_Services FROM rl_Administrator;
+REVOKE SELECT, INSERT, UPDATE, DELETE ON Employee FROM rl_Administrator;
+REVOKE SELECT, DELETE ON Room_Configuration FROM rl_Administrator;
+REVOKE SELECT, DELETE ON Room_Options FROM rl_Administrator;
+REVOKE SELECT, DELETE ON Reservation FROM rl_Administrator;
+REVOKE SELECT, DELETE ON Client FROM rl_Administrator;
+REVOKE SELECT, DELETE ON Client_Reservation FROM rl_Administrator;
+REVOKE SELECT, DELETE ON Add_Services_Reservation FROM rl_Administrator;
+REVOKE SELECT, DELETE ON Contract FROM rl_Administrator;
+
+-- Удаление индексов
+DROP INDEX IF EXISTS Index_ID_Class;
+DROP INDEX IF EXISTS Index_Name_Status_Room;
+DROP INDEX IF EXISTS Index_ID_Status_Room;
+DROP INDEX IF EXISTS Index_ID_Room;
+DROP INDEX IF EXISTS Index_Number_Room;
+DROP INDEX IF EXISTS Index_ID_Configuration;
+DROP INDEX IF EXISTS Index_ID_Room_Configuration;
+DROP INDEX IF EXISTS Index_ID_Options;
+DROP INDEX IF EXISTS Index_ID_Room_Options;
+DROP INDEX IF EXISTS Index_ID_Reservation;
+DROP INDEX IF EXISTS Index_Number_Reservation;
+DROP INDEX IF EXISTS Index_ID_Client;
+DROP INDEX IF EXISTS Index_Phone_Client;
+DROP INDEX IF EXISTS Index_Email_Client;
+DROP INDEX IF EXISTS Index_Login_Client;
+DROP INDEX IF EXISTS Index_ID_Client_Reservation;
+DROP INDEX IF EXISTS Index_ID_Add_Services;
+DROP INDEX IF EXISTS Index_ID_Add_Services_Reservation;
+DROP INDEX IF EXISTS Index_ID_Employee;
+DROP INDEX IF EXISTS Index_Login_Employee;
+DROP INDEX IF EXISTS Index_ID_Contract;
+DROP INDEX IF EXISTS Index_Number_Contract;
+
+-- Удаление таблиц
+DROP TABLE IF EXISTS Contract;
+DROP TABLE IF EXISTS Add_Services_Reservation;
+DROP TABLE IF EXISTS Client_Reservation;
+DROP TABLE IF EXISTS Reservation;
+DROP TABLE IF EXISTS Room_Options;
+DROP TABLE IF EXISTS Options;
+DROP TABLE IF EXISTS Room_Configuration;
+DROP TABLE IF EXISTS Configuration;
+DROP TABLE IF EXISTS Room;
+DROP TABLE IF EXISTS Status_Room;
+DROP TABLE IF EXISTS Class;
+DROP TABLE IF EXISTS Client;
+DROP TABLE IF EXISTS Add_Services;
+DROP TABLE IF EXISTS Employee;
+
+CALL Structure_Create();
+	end;
+$$;
+</details> ```

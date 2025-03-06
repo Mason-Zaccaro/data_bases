@@ -28,7 +28,7 @@
 7. **[Шаг7_Создание_Базы_и_Ролей](./Step_2_Realization_database/Step7_Database_and_Roles_Creation.docx)**  
    - Создание базы данных в PostgreSQL и MySQL, настройка подключений, определение ролей (Клиент, Сотрудник, Администратор) и тестирование доступа.
 
-8. **[Шаг8_Реализация_Таблиц_и_Прав](./Step_2_Realization_database/Step8_Tables_and_Permissions_Implementation.docx)**  
+8. **[Шаг8_Реализация_Таблиц_и_Прав](./Step_2_Realization_database/step8_creating_table_and_right/README.md)**  
    - Реализация таблиц базы данных, создание индексов, процедур для структуры, распределение прав доступа к таблицам для ролей.
 
 9. **[Шаг9_Хранимые_Процедуры_и_Права](./Step_2_Realization_database/Step9_Stored_Procedures_and_Permissions.docx)**  
