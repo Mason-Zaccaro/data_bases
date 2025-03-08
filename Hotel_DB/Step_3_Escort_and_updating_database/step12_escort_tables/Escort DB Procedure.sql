@@ -1,4 +1,3 @@
-
 -- Процедура для добавления записи в таблицу Reservation
 CREATE OR REPLACE PROCEDURE Reservation_Insert (
     p_Number_Reservation VARCHAR(16),
