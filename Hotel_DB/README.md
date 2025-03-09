@@ -25,27 +25,25 @@
 
 ## Этап 2: Реализация базы данных
 
-7. **[Шаг7_Создание_Базы_и_Ролей](./Step_2_Realization_database/Step7_Database_and_Roles_Creation.docx)**  
+7. **[Шаг7_Создание_Базы_и_Ролей](./Step_2_Realization_database/step7_creating_database)**  
    - Создание базы данных в PostgreSQL и MySQL, настройка подключений, определение ролей (Клиент, Сотрудник, Администратор) и тестирование доступа.
 
-8. **[Шаг8_Реализация_Таблиц_и_Прав](./Step_2_Realization_database/step8_creating_table_and_right/README.md)**  
+8. **[Шаг8_Реализация_Таблиц_и_Прав](./Step_2_Realization_database/step8_creating_table_and_right)**  
    - Реализация таблиц базы данных, создание индексов, процедур для структуры, распределение прав доступа к таблицам для ролей.
 
-9. **[Шаг9_Хранимые_Процедуры_и_Права](./Step_2_Realization_database/Step9_Stored_Procedures_and_Permissions.docx)**  
+9. **[Шаг9_Хранимые_Процедуры_и_Права](./Step_2_Realization_database/step9_creating_procedures_and_rights_for_roles)**  
    - Создание хранимых процедур для операций с данными (добавление, изменение, удаление) и настройка прав доступа к ним для ролей.
-
-10. **[Шаг10_Заполнение_Данными](./Step_2_Realization_database/Step10_Data_Population.docx)**  
-    - Заполнение таблиц тестовыми данными с использованием прямых SQL-запросов и хранимых процедур, проверка структуры на практике.
+   - Заполнение таблиц тестовыми данными с использованием прямых SQL-запросов и хранимых процедур, проверка структуры на практике.
 
 ## Этап 3: Сопровождение и актуализация базы данных
 
-11. **[Шаг11_Сопровождение_Моделей_и_3НФ](./Step_3_Escort_and_updating_database/Step11_Models_and_3NF_Maintenance.docx)**  
+10. **[Шаг10_Сопровождение_Моделей_и_3НФ](./Step_3_Escort_and_updating_database/Step11_Models_and_3NF_Maintenance.docx)**  
     - Сопровождение инфологической и даталогической моделей, словаря данных и структуры 3NF с учетом новых требований (добавление подсистемы заказов услуг).
 
-12. **[Шаг12_Сопровождение_Таблиц_PostgreSQL](./Step_3_Escort_and_updating_database/Step12_PostgreSQL_Tables_Maintenance.docx)**  
+11. **[Шаг11_Сопровождение_Таблиц_PostgreSQL](./Step_3_Escort_and_updating_database/Step12_PostgreSQL_Tables_Maintenance.docx)**  
     - Сопровождение таблиц в PostgreSQL: обновление структуры, добавление новых объектов (Status_Receipt, Receipt и др.), настройка ограничений и прав доступа.
 
-13. **[Шаг13_Актуализация_и_Фильтры](./Step_3_Escort_and_updating_database/Step13_Data_Updating_and_Filters.docx)**  
+12. **[Шаг12_Актуализация_и_Фильтры](./Step_3_Escort_and_updating_database/Step13_Data_Updating_and_Filters.docx)**  
     - Актуализация данных через хранимые процедуры, отработка фильтров (равно, меньше, больше и т.д.) и встроенных функций PostgreSQL (COUNT, AVG и др.), создание резервной копии.
 
 ## Цель проекта
