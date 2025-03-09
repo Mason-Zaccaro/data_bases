@@ -37,10 +37,10 @@
 
 ## Этап 3: Сопровождение и актуализация базы данных
 
-10. **[Шаг10_Сопровождение_Моделей_и_3НФ](./Step_3_Escort_and_updating_database/Step11_Models_and_3NF_Maintenance.docx)**  
+10. **[Шаг10_Сопровождение_Моделей_и_3НФ](./Step_3_Escort_and_updating_database/step10_escort_model)**  
     - Сопровождение инфологической и даталогической моделей, словаря данных и структуры 3NF с учетом новых требований (добавление подсистемы заказов услуг).
 
-11. **[Шаг11_Сопровождение_Таблиц_PostgreSQL](./Step_3_Escort_and_updating_database/Step12_PostgreSQL_Tables_Maintenance.docx)**  
+11. **[Шаг11_Сопровождение_Таблиц_PostgreSQL](./Step_3_Escort_and_updating_database/step11_escort_tables)**  
     - Сопровождение таблиц в PostgreSQL: обновление структуры, добавление новых объектов (Status_Receipt, Receipt и др.), настройка ограничений и прав доступа.
 
 12. **[Шаг12_Актуализация_и_Фильтры](./Step_3_Escort_and_updating_database/Step13_Data_Updating_and_Filters.docx)**  
